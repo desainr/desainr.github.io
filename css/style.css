@@ -57,24 +57,20 @@ section {
     height: 100%;
     width: 100%;  
     box-shadow: 0 10px 6px -6px #777;
-    background: url("../images/detroit.jpg");
+    background: url("../images/background_alt.jpg");
     background-repeat: no-repeat; 
     background-position: center;
-    background-attachment: fixed;       
-    webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; 
-    /*filter: grayscale();*/
+    background-attachment: fixed;  
+    background-size: cover;
 }
 
 .home-header h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     letter-spacing: 0.2rem;
 }
 
 .home-header {
-    margin-top: 5%;
+    margin-top: 10%;
     color: white;
     text-transform: uppercase;
     font-weight: 900;
@@ -91,40 +87,18 @@ section {
 }
 
 .navbar {
-    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-    position: fixed;
-    left: 87%;
-    bottom: 15%;
-    margin-left: 2em;
-    border: 1px solid #eee;
-    background: white;
-    padding: 1rem;
-    padding-right: 3rem;
-    z-index: 999;
+    background-color: darkblue;
+}
+.navbar-list > li {
+    display: inline;
 }
 
-.navbar-list {
-    list-style-type: none;
-    padding: 0 0 0 0;
-}
-
-.navbar-list li a {
-    text-transform: uppercase;
-    display: block;
-    width: 60px;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: .2rem;
-    text-decoration: none;
-    line-height: 6.5rem;
-    color: #222; 
-    padding: 0 0 0 0;
-}
 
 /* About page */
 #about {
     font-size: 1.75rem;
 }
+
 
 .profile-picture {
     border-radius: 10%;
@@ -138,13 +112,60 @@ section {
 
 
 /* Larger than mobile */
-@media (min-width: 400px) {}
+@media (min-width: 400px) {
+
+}
 
 /* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {}
+@media (min-width: 550px) {
+  
+}
 
 /* Larger than tablet */
-@media (min-width: 750px) {}
+@media (min-width: 750px) {
+    #home {     
+        background-size: cover; 
+    }
+    .navbar {
+        box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+        position: fixed;
+        left: 87%;
+        bottom: 15%;
+        margin-left: 2em;
+        border: 1px solid #eee;
+        background: white;
+        padding: 1rem;
+        padding-right: 3rem;
+        z-index: 999;
+    }
+    
+    .navbar-list {
+        list-style-type: none;
+        padding: 0 0 0 0;
+    }
+    
+    .navbar-list li a {
+        text-transform: uppercase;
+        display: block;
+        width: 60px;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: .2rem;
+        text-decoration: none;
+        line-height: 6.5rem;
+        color: #222; 
+        padding: 0 0 0 0;
+    }
+}
+
+@media(min-width: 900px) {
+    .profile-picture {
+        float: right;
+        height: 45%;
+        width: 45%;
+        margin: 1.5rem;
+    }
+}
 
 /* Larger than desktop */
 @media (min-width: 1000px) {}
