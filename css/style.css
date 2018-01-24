@@ -30,7 +30,7 @@ section {
 }
 
 .page-header h4 {
-    margin-left: 4em;
+    margin-left: 3em;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
 }
@@ -127,6 +127,11 @@ section {
     letter-spacing: 0.2rem;
 }
 
+/* Other page */
+.other-item {
+    justify-content: space-between;
+    width: 20em;
+}
 /* Links page */
 .links-container {
     display: flex;
