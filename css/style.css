@@ -7,14 +7,11 @@
          url('fonts/raleway-v11-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
+/* All pages */
 html, body {
     height: 100%;
     font-family: 'Raleway', sans-serif;
     margin: 0;
-}
-
-section {
-    margin-bottom: 2em;
 }
 
 .full-page {
@@ -24,13 +21,8 @@ section {
     box-shadow: 0 10px 6px -6px #777;
 }
 
-.small-page{
-    height: 15%;
-    width: 100%;
-}
-
-.fa {
-    color: #1EAEDB; 
+section {
+    margin-bottom: 2em;
 }
 
 .page-header {
@@ -50,6 +42,27 @@ section {
 
 .pad-top {
     padding-top: 2rem;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-item {
+    display: flex;
+}
+
+/* Navbar */
+.navbar-list li a:hover {
+    color: #0FA0CE; 
+}
+
+.navbar {
+    background-color: darkblue;
+}
+.navbar-list > li {
+    display: inline;
 }
 
 /* Home page */ 
@@ -84,19 +97,6 @@ section {
     border-bottom: 0.1em solid white;
 }
 
-/* Navbar */
-.navbar-list li a:hover {
-    color: #0FA0CE; 
-}
-
-.navbar {
-    background-color: darkblue;
-}
-.navbar-list > li {
-    display: inline;
-}
-
-
 /* About page */
 #about {
     font-size: 1.75rem;
@@ -107,12 +107,47 @@ section {
     border-radius: 10%;
 }
 
-/* Links */
-#kaggle-logo{
-    margin-top: 1rem;
-    height: 7.5rem;
+/* S & P page */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
 }
 
+.skill {
+    width: 35rem;
+    height: auto;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.skill h5 {
+    color: #1EAEDB; 
+    letter-spacing: 0.2rem;
+}
+
+/* Links page */
+.links-container {
+    display: flex;
+    justify-content: center;
+}
+
+.link {
+    display: flex;
+    width: 10em;
+    justify-content: space-around;
+}
+
+.fa {
+    color: #1EAEDB; 
+}
+
+.fa-kaggle:before {
+    font-family: roboto;
+    font-size: 5em;
+    content: "k"; 
+}
 
 /* Larger than mobile */
 @media (min-width: 400px) {
