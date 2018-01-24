@@ -1,0 +1,19 @@
+name: Nicholas Desai's Personal Site
+
+title: Nicholas Desai
+
+description: A website for people looking for more information about Nicholas Desai
+
+plugins:
+  - jekyll-seo-tag
+
+author: Nicholas Desai
+
+email: desainr95@gmail.com
+
+url: http://nicholasrdesai.com
+
+github_username: desainr
+
+twitter_username: nickdeessaaii
+
