@@ -9,6 +9,7 @@
 }
 
 @emphasis-color: #1EAEDB;
+@letter-spacing: 0.2rem;
 
 // Full site
 html, body {
@@ -34,13 +35,13 @@ section {
     h4 {
         margin-left: 4em;
         text-transform: uppercase;
-        letter-spacing: 0.2rem;
+        letter-spacing: @letter-spacing;
     }
 }
 
 .emphasis {
     color: @emphasis-color; 
-    letter-spacing: 0.2rem;
+    letter-spacing: @letter-spacing;
 }
 
 .pad-top {
@@ -72,33 +73,118 @@ section {
         padding-right: 3rem;
         z-index: 999;
     }
+}
 
-    .navbar-list {
-        @media (min-width: 750px) {
-            
-            list-style-type: none;
-            padding: 0 0 0 0;
+.navbar-list {
+    @media (min-width: 750px) {
+        
+        list-style-type: none;
+        padding: 0 0 0 0;
 
-            li {
-                display: inline;
-                a {
-                    text-transform: uppercase;
-                    display: block;
-                    width: 60px;
-                    font-size: 11px;
-                    font-weight: 600;
-                    letter-spacing: .2rem;
-                    text-decoration: none;
-                    line-height: 6.5rem;
-                    color: #222; 
-                    padding: 0 0 0 0;
-                    
-                    &:hover {
-                        color: @emphasis-color;
-                    }
+        li {
+            display: inline;
+            a {
+                text-transform: uppercase;
+                display: block;
+                width: 60px;
+                font-size: 11px;
+                font-weight: 600;
+                letter-spacing: .2rem;
+                text-decoration: none;
+                line-height: 6.5rem;
+                color: #222; 
+                padding: 0 0 0 0;
+                
+                &:hover {
+                    color: @emphasis-color;
                 }
             }
         }
     }
 }
+
+#home {
+    height: 100%;
+    width: 100%;  
+    box-shadow: 0 10px 6px -6px #777;
+    background: url("../images/background_mobile.jpg");
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-attachment: fixed;  
+    background-size: cover;
+
+    @media (max-width: 550px) {
+        background: url("../images/background_alt.jpg");
+    }
+}
+
+.home-header {
+    margin-top: 8%;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: @letter-spacing;
+    padding: 0.75rem;
+    margin-left: 1rem;
+    border-top: 0.1em solid white;
+    border-bottom: 0.1em solid white;
+
+    h1 {
+        font-size: 5.5rem;
+        letter-spacing: 0.2rem;
+        text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+        0px 8px 13px rgba(0,0,0,0.1),
+        0px 18px 23px rgba(0,0,0,0.1);
+    }
+}
+
+.profile-picture {
+    border-radius: 10%;
+
+    @media (min-width: 900px) {
+        float: right;
+        height: 45%;
+        width: 45%;
+        margin: 1.5rem;
+    }
+}
+
+.flex-grid {
+    &:extend(.flex-container);
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.skill {
+    width: 35rem;
+    height: auto;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    h5 {
+        &:extend(.emphasis);
+    }
+}
+
+.other-item {
+    justify-content: space-between;
+    width: 20em;
+}
+
+.link {
+    &:extend(.flex-item);
+    width: 10em;
+    justify-content: space-around;
+}
+
+.fa {
+    color: @emphasis-color;
+}
+
+.fa-kaggle:before {
+    font-family: roboto;
+    font-size: 5em;
+    content: "k"; 
+}
+
 
